@@ -30,7 +30,7 @@ func CustomHTTPErrorHandler(err error, ctx echo.Context) {
 		return
 	default:
 		ctx.Logger().Info(err)
-		jsonError = ctx.JSON(400, struct {
+		jsonError = ctx.JSON(500, struct {
 			Body struct{ Info string `json:"info"` } `json:"body"`
 		}{Body: struct{ Info string `json:"info"` }{Info: err.Error()}})
 	}

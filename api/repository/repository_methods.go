@@ -4,10 +4,9 @@ import (
 	"database/sql"
 	"github.com/BarniBl/TestWorkMTS/pkg/models"
 	_ "github.com/lib/pq"
-	"strconv"
 )
 
-var ConnStr string = "user=postgres password=7396 dbname=sunrise_db sslmode=disable"
+var ConnStr string = "user=postgres password=7396 dbname=testmts sslmode=disable"
 
 func (RS *RepositoryStruct) NewDataBaseWorker() error {
 	RS.connectionString = ConnStr
@@ -26,12 +25,12 @@ func (RS *RepositoryStruct) NewDataBaseWorker() error {
 }
 
 func (RS *RepositoryStruct) Insert(executeQuery string, params []interface{}) (string, error) {
-	var id uint64
+	var id string
 	err := RS.DataBase.QueryRow(executeQuery, params...).Scan(&id)
 	if err != nil {
 		return "", err
 	}
-	return strconv.Itoa(int(id)), nil
+	return id, nil
 }
 
 func (RS *RepositoryStruct) Update(executeQuery string, params []interface{}) (int, error) {
