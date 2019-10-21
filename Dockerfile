@@ -1,0 +1,13 @@
+FROM golang:latest
+
+WORKDIR /app
+COPY go.mod ./
+RUN go mod download
+COPY main.go .
+COPY api .
+COPY pkg .
+RUN go build -o main .
+
+EXPOSE 8080
+
+CMD ["./main"]
