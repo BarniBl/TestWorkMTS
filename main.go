@@ -19,7 +19,7 @@ func main() {
 		e.Logger.Errorf("server error: %s", err)
 		return
 	}
-	handlers := delivery.HandlersStruct{repositoryWorker: worker}
+	handlers := delivery.HandlersStruct{RepositoryWorker: &worker}
 	handlers.NewHandlers(e)
 	e.Logger.Warnf("start listening on %s", consts.HostAddress)
 	err := e.Start(consts.HostAddress)

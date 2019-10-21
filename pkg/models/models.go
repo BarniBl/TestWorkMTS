@@ -5,3 +5,8 @@ type TaskResponse struct {
 	CreatedTime string `json:"timestamp"`
 	Status      string `json:"status"`
 }
+
+type TaskStatus struct {
+	CreatedTime string `json:"timestamp"`
+	Status      string `json:"status"`
+}
