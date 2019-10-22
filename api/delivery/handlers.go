@@ -3,7 +3,7 @@ package delivery
 import (
 	"errors"
 	"fmt"
-	functions "github.com/BarniBl/TestWorkMTS/api"
+	"github.com/BarniBl/TestWorkMTS/api/functions"
 	"github.com/BarniBl/TestWorkMTS/pkg/consts"
 	"github.com/BarniBl/TestWorkMTS/pkg/models"
 	"github.com/labstack/echo"
