@@ -3,6 +3,7 @@ package delivery
 import (
 	"errors"
 	"fmt"
+	"github.com/BarniBl/TestWorkMTS/api/functions"
 	"github.com/BarniBl/TestWorkMTS/pkg/consts"
 	"github.com/BarniBl/TestWorkMTS/pkg/models"
 	"github.com/labstack/echo"
@@ -12,14 +13,13 @@ import (
 
 func (h *HandlersStruct) HandlerCreateTask(ctx echo.Context) (Err error) {
 	taskuuid := uuid.NewV4()
-	return ctx.JSON(202, taskuuid.String())
-/*	var params []interface{}
+	var params []interface{}
 	params = append(params, taskuuid.String(), "created", time.Now())
 	if _, err := h.RepositoryWorker.Insert(consts.InsertNewTask, params); err != nil {
 		return err
 	}
 	go functions.DoWork(taskuuid.String(), h.RepositoryWorker)
-	return ctx.JSON(202, taskuuid.String())*/
+	return ctx.JSON(202, taskuuid.String())
 }
 
 func (h *HandlersStruct) HandlerGetTaskStatus(ctx echo.Context) (Err error) {

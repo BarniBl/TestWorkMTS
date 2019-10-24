@@ -1,4 +1,4 @@
-package TestWorkMTS
+package main
 
 import (
 	"github.com/BarniBl/TestWorkMTS/api/delivery"
@@ -15,10 +15,10 @@ func main() {
 	e.Use(customMiddleware.PanicMiddleware)
 	e.HTTPErrorHandler = customMiddleware.CustomHTTPErrorHandler
 	var worker repository.RepositoryStruct
-/*	if err := worker.NewDataBaseWorker(); err != nil {
+	if err := worker.NewDataBaseWorker(); err != nil {
 		e.Logger.Errorf("server error: %s", err)
 		return
-	}*/
+	}
 	handlers := delivery.HandlersStruct{RepositoryWorker: &worker}
 	handlers.NewHandlers(e)
 	e.Logger.Warnf("start listening on %s", consts.HostAddress)
