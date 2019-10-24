@@ -1,3 +1,5 @@
+github.com/BarniBl/TestWorkMTS v0.0.0-20191023193745-79586d8142ab h1:C7wTHc999IAhftb8xgo+t4t1lDYHf38hI34ouCr1X40=
+github.com/BarniBl/TestWorkMTS v0.0.0-20191023193745-79586d8142ab/go.mod h1:zXOPvzMH90/D2mxMEqeTY+Y7WSJOvZzGacCpcwhBx4s=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
