@@ -1,4 +1,4 @@
-package main
+package TestWorkMTS
 
 import (
 	"github.com/BarniBl/TestWorkMTS/api/delivery"
